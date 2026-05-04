@@ -1,0 +1,1 @@
+"""GökKurt test paketi."""

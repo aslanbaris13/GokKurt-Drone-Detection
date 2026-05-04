@@ -1,8 +1,8 @@
-# GökKurt — Drone Algılama ve Takip Sistemi
+# Teknofest — Drone Algılama ve Takip Sistemi
 
 YOLOv8 Nano · Raspberry Pi 5 · Yer Tabanlı Prototip
 
-Gökyüzünü tarayan kamera görüntüsü üzerinde YOLOv8 Nano modeli ile drone tespit eder, pan-tilt servo mekanizması ile dronu takip eder ve 4 saniyelik kesintisiz kilit sağlandığında LED + buzzer ile uyarı verir.
+Gökyüzünü tarayan kamera görüntüsü üzerinde YOLOv8 Nano modeli ile drone tespit eder, manuel PTZ kamera sistemi ile takip edilmesine imkân tanır ve 4 saniyelik kesintisiz kilit sağlandığında LED + buzzer ile uyarı verir.
 
 ---
 
@@ -39,8 +39,8 @@ GND      →  Servo GND, LED katot, Buzzer GND
 ### 1. Projeyi kopyala
 
 ```bash
-git clone <repo-url> ~/Desktop/object_detector
-cd ~/Desktop/object_detector
+git clone https://github.com/aslanbaris13/Teknofest-PTZ-Object-Detector.git
+cd Teknofest-PTZ-Object-Detector
 ```
 
 ### 2. Python sanal ortam oluştur

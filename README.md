@@ -1,8 +1,8 @@
-# Teknofest — Drone Algılama ve Takip Sistemi
+# GökKurt — Drone Tespit ve Kilit Sistemi
 
-YOLOv8 Nano · Raspberry Pi 5 · Yer Tabanlı Prototip
+YOLOv26n · Raspberry Pi 5 · Teknofest Savaşan İHA 2026
 
-Gökyüzünü tarayan kamera görüntüsü üzerinde YOLOv8 Nano modeli ile drone tespit eder, manuel PTZ kamera sistemi ile takip edilmesine imkân tanır ve 4 saniyelik kesintisiz kilit sağlandığında LED + buzzer ile uyarı verir.
+Gökyüzünü tarayan kamera görüntüsü üzerinde fine-tune edilmiş YOLOv26n modeli ile drone tespit eder, pan-tilt servo mekanizması ile hedefi takip eder ve 4 saniyelik kesintisiz kilit sağlandığında LED + buzzer uyarısı verir. Şartname: KTR §4 (Otonom Görevler) ve §6 (YKİ).
 
 ---
 
@@ -39,8 +39,8 @@ GND      →  Servo GND, LED katot, Buzzer GND
 ### 1. Projeyi kopyala
 
 ```bash
-git clone https://github.com/aslanbaris13/Teknofest-PTZ-Object-Detector.git
-cd Teknofest-PTZ-Object-Detector
+git clone https://github.com/aslanbaris13/GokKurt-Drone-Detection.git
+cd GokKurt-Drone-Detection
 ```
 
 ### 2. Python sanal ortam oluştur
@@ -62,10 +62,10 @@ pip install -r requirements.txt
 > sudo systemctl enable pigpiod && sudo systemctl start pigpiod
 > ```
 
-### 4. YOLOv8 modeli
+### 4. Model
 
-`models/yolov8n.pt` dosyasını `models/` klasörüne yerleştir.  
-Ultralytics, modeli ilk çalıştırmada otomatik indirebilir; model adını `src/config.py` içindeki `YOLO_MODEL_PATH` ile değiştir.
+Fine-tune edilmiş `drone_v26_best.pt` dosyasını `models/` klasörüne yerleştir (mAP50=%98, 18 epoch, YOLOv26n).  
+Model yolunu değiştirmek için `src/config.py` içindeki `YOLO_MODEL_PATH` parametresini güncelle.
 
 ---
 
